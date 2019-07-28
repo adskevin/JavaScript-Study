@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Exercicio de JS</title>
+    </head>
+    <body>
+
+        <button id="new">Add Quadrado</button>
+
+        <div id="squares"></div>
+
+        <script>
+            var btnElement = document.getElementById("new");
+            var squaresElement = document.getElementById("squares");
+
+            btnElement.onclick = function(){
+                console.log("entrou");
+                var square = document.createElement("div");
+
+                square.style.width = "100px";
+                square.style.height = "100px";
+                square.style.backgroundColor = "#F00";
+                // square.style.cssFloat = "left";
+
+                squaresElement.appendChild(square);
+
+            }
+        </script>
+    </body>
+</html>

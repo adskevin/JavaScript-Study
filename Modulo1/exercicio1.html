@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Exercicio de JS</title>
+    </head>
+    <body>
+        <script>
+
+            var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+            };
+
+            function imprime(objeto){
+                return "O usuario mora em " + objeto.cidade + " / " + objeto.uf + ", no bairro " + objeto.bairro + ", na rua " + objeto.rua + " com nº " + objeto.numero + "."
+            }
+
+            // O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com nº 1293.
+
+            console.log(imprime(endereco));
+        </script>
+    </body>
+</html>
