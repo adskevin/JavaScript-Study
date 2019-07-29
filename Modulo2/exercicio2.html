@@ -12,6 +12,15 @@
             var btnElement = document.getElementById("new");
             var squaresElement = document.getElementById("squares");
 
+            function getRandomColor() { // Função que devolve uma cor aleatória.
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
             btnElement.onclick = function(){
                 var square = document.createElement("div");
 
@@ -20,8 +29,13 @@
                 square.style.backgroundColor = "#F00";
                 square.style.cssFloat = "left";
 
+                square.onmouseover = function(){
+                    square.style.backgroundColor = getRandomColor(); 
+                }
+
                 squaresElement.appendChild(square);
             }
+
         </script>
     </body>
 </html>
