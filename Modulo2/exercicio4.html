@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Exercicio de JS</title>
+    </head>
+    <body>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+
+        <ul></ul>
+        
+        <script>
+            var nomes = ['Diego', 'Gabriel', 'Lucas'];
+            var listElement = document.querySelector('ul');
+
+            for (nome of nomes) {
+                var liElement = document.createElement('li');
+                var textElement = document.createTextNode(nome);
+                liElement.appendChild(textElement);
+                listElement.appendChild(liElement);
+            }
+
+            function adicionar(){
+                // console.log("entrou");
+                var inputElement = document.querySelector("input");
+                var liElement = document.createElement('li');
+                var textElement = document.createTextNode(inputElement.value);
+                liElement.appendChild(textElement);
+                listElement.appendChild(liElement);
+                inputElement.value = "";
+            }
+        </script>
+    </body>
+</html>
